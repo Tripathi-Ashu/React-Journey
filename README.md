@@ -85,13 +85,13 @@ My journey of learning **React.js** — from fundamentals to building real-world
 
 ### 📦 Advanced React
 
-* [ ] Context API
-* [ ] Prop Drilling
-* [ ] State Management
-* [ ] Performance Optimization
-* [ ] Lazy Loading
-* [ ] Code Splitting
-* [ ] Error Boundaries
+* [x] Context API
+* [x] Prop Drilling
+* [x] State Management
+* [x] Performance Optimization
+* [x] Lazy Loading
+* [x] Code Splitting
+* [x] Error Boundaries
 
 ### 🛠️ Styling & UI
 
