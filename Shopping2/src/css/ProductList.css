@@ -1,0 +1,17 @@
+.products-section {
+    background: #fff;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+  }
+  
+  .section-title {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+  
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }

@@ -1,0 +1,122 @@
+.cart-section {
+    background: #fff;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+    height: fit-content;
+    position: sticky;
+    top: 95px;
+  }
+  
+  .cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .cart-header h2 {
+    font-size: 24px;
+  }
+  
+  .cart-header span {
+    background: #eff6ff;
+    color: #2563eb;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  
+  .empty-cart {
+    text-align: center;
+    padding: 40px 10px;
+    color: #777;
+  }
+  
+  .empty-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+  }
+  
+  .empty-cart h3 {
+    color: #333;
+    margin-bottom: 8px;
+  }
+  
+  .empty-cart p {
+    font-size: 14px;
+  }
+  
+  .cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 14px;
+  }
+  
+  .cart-item h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .cart-item p {
+    color: #2563eb;
+    font-weight: 700;
+  }
+  
+  .remove-btn {
+    border: none;
+    background: #fee2e2;
+    color: #dc2626;
+    padding: 7px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+  }
+  
+  .remove-btn:hover {
+    background: #fecaca;
+  }
+  
+  .cart-footer {
+    margin-top: 20px;
+    border-top: 1px solid #e5e7eb;
+    padding-top: 20px;
+  }
+  
+  .total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .total-row strong {
+    color: #2563eb;
+  }
+  
+  .clear-btn {
+    width: 100%;
+    border: none;
+    background: #111827;
+    color: white;
+    padding: 11px;
+    border-radius: 8px;
+    font-weight: 600;
+  }
+  
+  .clear-btn:hover {
+    background: #000;
+  }
