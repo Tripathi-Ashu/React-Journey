@@ -88,7 +88,7 @@ My journey of learning **React.js** — from fundamentals to building real-world
 * [x] Context API
 * [x] Prop Drilling
 * [x] State Management
-* [x] Performance Optimization
+* [x]   Performance Optimization
 * [x] Lazy Loading
 * [x] Code Splitting
 * [] Error Boundaries
