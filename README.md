@@ -75,12 +75,12 @@ My journey of learning **React.js** — from fundamentals to building real-world
 
 ### 🧭 Routing
 
-* [ ] React Router
-* [ ] Routes
-* [ ] Route Parameters
-* [ ] Link & NavLink
-* [ ] Nested Routes
-* [ ] 404 Page
+* [x] React Router
+* [x] Routes
+* [x] Route Parameters
+* [x] Link & NavLink
+* [x] Nested Routes
+* [x] 404 Page
 * [ ] Protected Routes
 
 ### 📦 Advanced React
