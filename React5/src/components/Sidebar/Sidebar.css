@@ -1,0 +1,165 @@
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  
+    width: 100%;
+    padding: 14px 20px;
+  
+    color: white;
+    text-decoration: none;
+  
+    cursor: pointer;
+  
+    border-radius: 8px;
+  
+    transition: 0.3s ease;
+  }
+  
+  .sidebar-item:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.12);
+  }
+  
+  .sidebar-item.active {
+    color: white;
+    background: #8b00ff;
+  }
+  
+  .sidebar-item i {
+    font-size: 20px;
+  }
+  
+  .sidebar-item span {
+    font-size: 17px;
+  }
+
+  /* ================================
+   SIDEBAR
+================================ */
+
+.sidebar {
+    position: fixed;
+    top: 70px;
+    left: 0;
+  
+    width: 250px;
+    height: calc(100vh - 70px);
+  
+    background: #ffffff;
+  
+    border-right: 1px solid #eee;
+  
+    overflow-y: auto;
+  
+    z-index: 1000;
+  
+    transition: transform 0.3s ease;
+  }
+  
+  
+  /* ================================
+     OPEN
+  ================================ */
+  
+  .sidebar-open {
+    transform: translateX(0);
+  }
+  
+  
+  /* ================================
+     CLOSED
+  ================================ */
+  
+  .sidebar-closed {
+    transform: translateX(-100%);
+  }
+  
+  
+  /* ================================
+     MENU
+  ================================ */
+  
+  .sidebar-menu {
+    list-style: none;
+    margin: 0;
+    padding: 20px 12px;
+  }
+  
+  
+  /* ================================
+     ITEM
+  ================================ */
+  
+  .sidebar-item {
+    display: flex;
+    align-items: center;
+  
+    gap: 14px;
+  
+    padding: 12px 15px;
+  
+    margin-bottom: 5px;
+  
+    border-radius: 8px;
+  
+    color: #687896;
+  
+    cursor: pointer;
+  
+    font-size: 15px;
+  
+    transition: all 0.2s ease;
+  }
+  
+  .sidebar-item i {
+    font-size: 18px;
+  }
+  
+  
+  /* Hover */
+  
+  .sidebar-item:hover {
+    background: #f3e8ff;
+    color: #8019f5;
+  }
+  
+  
+  /* Active */
+  
+  .sidebar-item.active {
+    background: #8019f5;
+    color: #ffffff;
+  }
+  
+  
+  /* Arrow */
+  
+  .sidebar-item .arrow {
+    margin-left: auto;
+    font-size: 13px;
+  }
+  
+  
+  /* Heading */
+  
+  .sidebar-heading {
+    padding: 20px 15px 8px;
+  
+    color: #999;
+  
+    font-size: 12px;
+  
+    text-transform: uppercase;
+  
+    font-weight: 600;
+  }
+  
+  
+  /* Heart */
+  
+  .sidebar-item .heart {
+    margin-left: auto;
+    color: #ff4f81;
+  }
+  

@@ -1,0 +1,721 @@
+/* =========================
+   DASHBOARD
+========================= */
+
+.dashboard-container {
+    padding: 25px 30px 50px;
+    background: #f5f0fa;
+    min-height: 100vh;
+  }
+  
+  
+  /* =========================
+     HEADING
+  ========================= */
+  
+  .dashboard-heading {
+    background: #eadcf8;
+    margin: -25px -30px 28px;
+    padding: 20px 30px;
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .dashboard-heading h2 {
+    margin: 0;
+    font-size: 25px;
+    font-weight: 500;
+  }
+  
+  .dashboard-heading p {
+    margin: 5px 0 0;
+    color: #657899;
+    font-size: 16px;
+  }
+  
+  .dashboard-actions {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    color: #7d25e8;
+  }
+  
+  .dashboard-actions button {
+    border: 1px solid #e3d4f3;
+    background: #f1e8f9;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 15px;
+  }
+  
+  
+  /* =========================
+     COMMON CARD
+  ========================= */
+  
+  .dashboard-card,
+  .summary-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 3px 12px rgba(70, 40, 100, 0.08);
+  }
+  
+  
+  /* =========================
+     SUMMARY CARDS
+  ========================= */
+  
+  .summary-card {
+    min-height: 130px;
+    padding: 25px 20px;
+  
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .summary-card h6 {
+    color: #657899;
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .summary-card h3 {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 0 0 5px;
+  }
+  
+  .summary-icon {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    font-size: 25px;
+  }
+  
+  .summary-icon.blue {
+    color: #1264e9;
+    background: #edf4ff;
+  }
+  
+  .summary-icon.orange {
+    color: #ff9d00;
+    background: #fff5e4;
+  }
+  
+  .summary-icon.pink {
+    color: #db1751;
+    background: #fff0f4;
+  }
+  
+  .summary-icon.green {
+    color: #00a451;
+    background: #ebf9f0;
+  }
+  
+  .change-up {
+    color: #00a653;
+    font-size: 16px;
+  }
+  
+  .change-down {
+    color: #db1751;
+    font-size: 16px;
+  }
+  
+  
+  /* =========================
+     CARD HEADING
+  ========================= */
+  
+  .card-heading h3,
+  .purchase-card h3,
+  .comments-card h3,
+  .top-users h3 {
+    margin: 0;
+    font-size: 25px;
+    font-weight: 500;
+  }
+  
+  .card-heading p {
+    color: #657899;
+    margin-top: 5px;
+    font-size: 16px;
+  }
+  
+  
+  /* =========================
+     INVENTORY
+  ========================= */
+  
+  .inventory-card {
+    overflow: hidden;
+  }
+  
+  .card-heading {
+    padding: 18px 20px 8px;
+  }
+  
+  .inventory-table {
+    height: 220px;
+    overflow-y: auto;
+    padding: 5px 20px;
+  }
+  
+  .inventory-table table {
+    margin: 0;
+  }
+  
+  .inventory-table th {
+    font-size: 17px;
+    font-weight: 600;
+  }
+  
+  .inventory-table td {
+    font-size: 17px;
+    padding: 8px 5px;
+  }
+  
+  .inventory-table tr {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  
+  /* =========================
+     FINANCE TABS
+  ========================= */
+  
+  .finance-tabs {
+    display: flex;
+    margin-top: 10px;
+  }
+  
+  .finance-tabs > div {
+    flex: 1;
+    padding: 15px 20px;
+  }
+  
+  .finance-tabs strong {
+    display: block;
+    color: #777;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  .finance-tabs span {
+    display: block;
+    color: #657899;
+    font-size: 15px;
+    margin-top: 5px;
+  }
+  
+  .finance-tabs .active {
+    color: #8019f5;
+    background: #f8efff;
+    border-bottom: 3px solid #8019f5;
+  }
+  
+  .finance-tabs .active strong {
+    color: #8019f5;
+  }
+  
+  
+  /* =========================
+     GOLD CARD
+  ========================= */
+  
+  .gold-card {
+    padding: 18px 20px;
+    min-height: 405px;
+    position: relative;
+  }
+  
+  .gold-card p {
+    color: #657899;
+    margin: 3px 0;
+  }
+  
+  .gold-image {
+    text-align: center;
+    font-size: 85px;
+    margin: 35px 0 10px;
+  }
+  
+  .gold-card h1 {
+    text-align: center;
+    font-size: 38px;
+    font-weight: 400;
+  }
+  
+  .gold-card .change-up {
+    display: block;
+    text-align: center;
+  }
+  
+  .gold-footer {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+  }
+  
+  .gold-footer strong {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  .gold-footer span {
+    color: #657899;
+  }
+  
+  .gold-footer b {
+    color: #00a653;
+  }
+  
+  
+  /* =========================
+     WELCOME
+  ========================= */
+  
+  .welcome-card {
+    background: linear-gradient(
+      135deg,
+      #7b0df4,
+      #9510f4
+    );
+  
+    min-height: 405px;
+    border-radius: 8px;
+    padding: 18px;
+    color: white;
+  
+    box-shadow: 0 3px 12px rgba(70, 40, 100, 0.12);
+  }
+  
+  .welcome-user {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+  
+  .welcome-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+  }
+  
+  .welcome-user span {
+    font-size: 16px;
+  }
+  
+  .welcome-user h3 {
+    margin: 3px 0;
+    font-size: 25px;
+  }
+  
+  .truck {
+    text-align: center;
+    font-size: 75px;
+    margin-top: 20px;
+  }
+  
+  .welcome-card > h1 {
+    font-size: 40px;
+    margin: 5px 0 0;
+  }
+  
+  .welcome-card > p {
+    margin: 0;
+  }
+  
+  .product-count {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    margin-top: 60px;
+  }
+  
+  .product-count > i {
+    background: rgba(255,255,255,.2);
+    padding: 14px;
+    border-radius: 7px;
+    font-size: 25px;
+  }
+  
+  .product-count h4 {
+    font-size: 25px;
+    margin: 0;
+  }
+  
+  .product-count span {
+    font-size: 15px;
+  }
+  
+  
+  /* =========================
+     PROFILE
+  ========================= */
+  
+  .profile-card {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .profile-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .profile-heading h3 {
+    font-size: 25px;
+    font-weight: 500;
+  }
+  
+  .profile-heading i {
+    color: #8019f5;
+  }
+  
+  .profile-image {
+    margin: 20px auto 15px;
+  }
+  
+  .profile-image img {
+    width: 190px;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .profile-card h2 {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 5px 0;
+  }
+  
+  .profile-card > p {
+    color: #657899;
+    font-size: 17px;
+  }
+  
+  
+  /* =========================
+     PROFILE STATS
+  ========================= */
+  
+  .profile-stats {
+    display: flex;
+    background: #f2e6fc;
+    border-radius: 8px;
+    padding: 18px 5px;
+    margin-top: 20px;
+  }
+  
+  .profile-stats div {
+    flex: 1;
+  }
+  
+  .profile-stats strong {
+    display: block;
+    font-size: 22px;
+    font-weight: 500;
+  }
+  
+  .profile-stats span {
+    color: #657899;
+    font-size: 15px;
+  }
+  
+  
+  /* =========================
+     PURCHASE HISTORY
+  ========================= */
+  
+  .purchase-card {
+    padding: 20px;
+  }
+  
+  .purchase-card > h3 {
+    margin-bottom: 30px;
+  }
+  
+  .purchase-header,
+  .purchase-row {
+    display: grid;
+    grid-template-columns: 2.2fr 1fr 1fr .8fr .5fr;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .purchase-header {
+    color: #8019f5;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 10px;
+  }
+  
+  .purchase-row {
+    padding: 14px 10px;
+  }
+  
+  .business-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .business-icon {
+    width: 45px;
+    height: 45px;
+    background: #f3e7ff;
+    color: #8019f5;
+    border-radius: 50%;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .business-info strong {
+    display: block;
+    font-size: 19px;
+  }
+  
+  .business-info span,
+  .purchase-row span:not(.status) {
+    display: block;
+    color: #657899;
+    font-size: 15px;
+  }
+  
+  .status {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 7px;
+    font-size: 13px;
+  }
+  
+  .status.medium {
+    background: #fff0df;
+    color: #ff7920;
+  }
+  
+  .status.normal {
+    background: #dff5e7;
+    color: #00a653;
+  }
+  
+  .status.high {
+    background: #f9dce4;
+    color: #df315b;
+  }
+  
+  .delete-btn {
+    border: 0;
+    background: transparent;
+    color: #ed1748;
+    font-size: 18px;
+  }
+  
+  .pagination-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px 0;
+  }
+  
+  .pagination-area b {
+    background: #8019f5;
+    color: white;
+    padding: 12px 17px;
+    border-radius: 8px;
+  }
+  
+  
+  /* =========================
+     COMMENTS
+  ========================= */
+  
+  .comments-card {
+    margin-top: 20px;
+  }
+  
+  .comments-card h3 {
+    padding: 20px;
+  }
+  
+  .comment-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 20px;
+    border-top: 1px solid #ddd;
+  }
+  
+  .comment-item img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .comment-item div {
+    flex: 1;
+  }
+  
+  .comment-item strong {
+    display: block;
+    font-size: 18px;
+  }
+  
+  .comment-item p {
+    color: #657899;
+    margin: 3px 0;
+    font-size: 15px;
+  }
+  
+  .comment-item > i {
+    color: #8019f5;
+  }
+  
+  
+  /* =========================
+     TOP USERS
+  ========================= */
+  
+  .top-users {
+    margin-top: 25px;
+  }
+  
+  .top-users h3 {
+    margin-bottom: 20px;
+  }
+  
+  .user-card {
+    background: white;
+    text-align: center;
+    padding: 20px 10px 0;
+    border-radius: 7px;
+    box-shadow: 0 3px 12px rgba(70, 40, 100, 0.07);
+  }
+  
+  .user-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .user-card h4 {
+    margin: 15px 0 3px;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  
+  .user-card > p {
+    color: #657899;
+    margin: 0;
+    font-size: 15px;
+  }
+  
+  .user-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 12px 8px;
+  }
+  
+  .user-stats div {
+    flex: 1;
+  }
+  
+  .user-stats strong {
+    display: block;
+    font-size: 17px;
+    font-weight: 500;
+  }
+  
+  .user-stats span {
+    color: #657899;
+    font-size: 14px;
+  }
+  
+  
+ 
+  
+  @media (max-width: 992px) {
+  
+    .dashboard-container {
+      padding: 20px;
+    }
+  
+    .dashboard-heading {
+      margin: -20px -20px 25px;
+      padding: 18px 20px;
+    }
+  
+    .dashboard-heading {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+    }
+  
+    .purchase-header {
+      display: none;
+    }
+  
+    .purchase-row {
+      grid-template-columns: 1fr 1fr;
+      padding: 20px 10px;
+      border-bottom: 1px solid #eee;
+    }
+  
+  }
+  
+  @media (max-width: 576px) {
+  
+    .summary-card {
+      min-height: 115px;
+    }
+  
+    .summary-icon {
+      width: 60px;
+      height: 60px;
+    }
+  
+    .dashboard-actions {
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+  
+    .finance-tabs {
+      overflow-x: auto;
+    }
+  
+    .finance-tabs > div {
+      min-width: 150px;
+    }
+  
+    .purchase-row {
+      grid-template-columns: 1fr;
+    }
+  
+    .pagination-area {
+      flex-direction: column;
+      gap: 15px;
+      align-items: flex-start;
+    }
+  
+  }

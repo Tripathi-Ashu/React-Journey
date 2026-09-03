@@ -1,0 +1,219 @@
+
+*
+{ 
+    box-sizing:border-box; 
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 78px;
+    z-index: 1000;
+    
+  }
+
+.navbar{
+    min-height:74px;
+}
+
+.brand-text{
+    position: relative;
+    top: -5px;
+}
+
+.brand-text h5{
+    font-size:20px;
+    font-weight:400;
+}
+.brand-text h5 span{
+    font-weight:700;
+}
+.brand-text small{
+    position: absolute;
+    top: 25px;
+    font-size:12px;
+    font-weight:400;
+}
+.search-box {
+    width: 280px !important;
+    margin-left: 40px;
+    background: #fff !important;
+}
+
+.search-box .input-group-text,
+.search-box .form-control,
+.search-box .btn {
+    background: #fff !important;
+    border: none !important;
+}
+
+.search-box .form-control:focus {
+    box-shadow: none ;
+}
+
+.main-navigation .nav-link{
+    padding:12px 14px;
+    color:#333;
+    font-size:14px;
+}
+
+.main-navigation .nav-link:hover{
+    background:#f5f6f8;
+    border-radius:8px;
+}
+
+.components-dropdown{
+    width:430px;
+}
+
+.application-dropdown{
+    width:330px;
+}
+
+.app-item{
+    padding:12px 5px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    text-decoration:none;
+    color:#333;
+    border-radius:8px;
+}
+
+.app-item:hover{
+    background:#f5f6f8;
+    color:#333;
+}
+
+.app-item i{
+    font-size:22px;
+    margin-bottom:6px;
+}
+
+.app-item strong{
+    font-size:11px;
+    font-weight:500;
+}
+
+.app-item small{
+    font-size:9px;
+    color:#999;
+}
+
+.weather h5{
+    font-size:23px;
+    font-weight:500;
+}
+
+.weather h5 span{
+    font-size:14px;
+    color:#888;
+}
+.not-fi {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.notification-btn {
+    position: relative;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notification-btn i {
+    font-size: 21px;
+    line-height: 1;
+}
+
+.notification-btn .badge {
+    position: absolute !important;
+    top: -4px !important;
+    right: -5px !important;
+    z-index: 10;
+    font-size: 9px;
+    font-weight: 600;
+    line-height: 1;
+    padding: 3px 5px;
+    min-width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-img{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.profile-large{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.profile-dropdown{
+    width:290px;
+}
+
+@media(max-width:1200px){
+
+    .weather{
+        display:none!important;
+    }
+
+    .search-box{
+        width:230px;
+    }
+
+}
+
+@media(max-width:992px){
+
+    .main-navigation{
+        display:none;
+    }
+
+    .search-box{
+        display:none;
+    }
+
+}
+
+@media(max-width:576px){
+
+    .brand-text{
+        display:none;
+    }
+
+    .navbar{
+        padding-left:12px!important;
+        padding-right:12px!important;
+    }
+
+    .language{
+        display:none;
+    }
+
+    .application-dropdown{
+        width:300px;
+    }
+
+    .profile-dropdown{
+        width:270px;
+    }
+
+}
