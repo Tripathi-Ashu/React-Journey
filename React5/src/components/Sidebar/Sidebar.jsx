@@ -1,14 +1,20 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
+import { sidebarMenu } from "./sidebarConfig";
+
 import "./Sidebar.css";
 
 function Sidebar({ isOpen }) {
 
-  const [isProfileOpen, setIsProfileOpen] = useState(false);
+  // Ek hi state se sab submenu track ho jate hain: { profile: true, company: false, ... }
+  const [openMenus, setOpenMenus] = useState({});
 
-  const toggleProfile = () => {
-    setIsProfileOpen(prev => !prev);
+  const toggleMenu = (key) => {
+    setOpenMenus(prev => ({
+      ...prev,
+      [key]: !prev[key],
+    }));
   };
 
   return (
@@ -20,185 +26,83 @@ function Sidebar({ isOpen }) {
 
       <ul className="sidebar-menu">
 
-        {/* DASHBOARD */}
-        <li>
-          <NavLink
-            to="/dashboard"
-            className={({ isActive }) =>
-              `sidebar-item ${isActive ? "active" : ""}`
-            }
-          >
-            <i className="bi bi-house-door"></i>
-            <span>Dashboard</span>
-          </NavLink>
-        </li>
+        {sidebarMenu.map((item, index) => {
 
+          // HEADING (jaise "Pages")
+          if (item.type === "heading") {
+            return (
+              <li key={index} className="sidebar-heading">
+                {item.label}
+              </li>
+            );
+          }
 
-        {/* FINANCE */}
-        <li>
-          <NavLink
-            to="/finance"
-            className={({ isActive }) =>
-              `sidebar-item ${isActive ? "active" : ""}`
-            }
-          >
-            <i className="bi bi-wallet2"></i>
-            <span>Finance</span>
-          </NavLink>
-        </li>
-
-
-        {/* NETWORK */}
-        <li>
-          <NavLink
-            to="/network"
-            className={({ isActive }) =>
-              `sidebar-item ${isActive ? "active" : ""}`
-            }
-          >
-            <i className="bi bi-grid"></i>
-            <span>Network</span>
-          </NavLink>
-        </li>
-
-
-        {/* SOCIAL */}
-        <li>
-          <NavLink
-            to="/social"
-            className={({ isActive }) =>
-              `sidebar-item ${isActive ? "active" : ""}`
-            }
-          >
-            <i className="bi bi-bullseye"></i>
-            <span>Social</span>
-          </NavLink>
-        </li>
-
-
-        {/* INVENTORY */}
-        <li>
-          <NavLink
-            to="/inventory"
-            className={({ isActive }) =>
-              `sidebar-item ${isActive ? "active" : ""}`
-            }
-          >
-            <i className="bi bi-box"></i>
-            <span>Inventory</span>
-          </NavLink>
-        </li>
-
-
-        {/* PAGE HEADING */}
-        <li className="sidebar-heading">
-          Pages
-        </li>
-
-
-        {/* PROFILE */}
-        <li>
-
-          <div
-            className={`sidebar-item profile-toggle ${
-              isProfileOpen ? "profile-open" : ""
-            }`}
-            onClick={toggleProfile}
-          >
-
-            <i className="bi bi-person-circle"></i>
-
-            <span>Profile</span>
-
-            <i
-              className={`bi bi-chevron-${
-                isProfileOpen ? "up" : "down"
-              } arrow`}
-            ></i>
-
-          </div>
-
-
-          {/* PROFILE SUBMENU */}
-          {isProfileOpen && (
-
-            <ul className="profile-submenu">
-
-             
-
-
-              <li>
+          // SIMPLE LINK (jaise Dashboard, Finance, Personalize)
+          if (item.type === "link") {
+            return (
+              <li key={index}>
                 <NavLink
-                  to="/profile/social"
-                  className="profile-submenu-item"
+                  to={item.path}
+                  className={({ isActive }) =>
+                    `sidebar-item ${isActive ? "active" : ""}`
+                  }
                 >
-                  <i className="bi bi-people"></i>
-                  <span>Social</span>
+                  <i className={`bi ${item.icon}`}></i>
+                  <span>{item.label}</span>
+                  {item.label === "Personalize" && (
+                    <span className="heart">♥</span>
+                  )}
                 </NavLink>
               </li>
+            );
+          }
 
+          // SUBMENU (jaise Profile, Company, Forum, Supportive Pages)
+          if (item.type === "submenu") {
 
-              <li>
-                <NavLink
-                  to="/profile/analytical"
-                  className="profile-submenu-item"
+            const isOpenMenu = !!openMenus[item.key];
+
+            return (
+              <li key={index}>
+
+                <div
+                  className={`sidebar-item profile-toggle ${
+                    isOpenMenu ? "profile-open" : ""
+                  }`}
+                  onClick={() => toggleMenu(item.key)}
                 >
-                  <i className="bi bi-bar-chart"></i>
-                  <span>Analytical</span>
-                </NavLink>
+                  <i className={`bi ${item.icon}`}></i>
+                  <span>{item.label}</span>
+                  <i
+                    className={`bi bi-chevron-${
+                      isOpenMenu ? "up" : "down"
+                    } arrow`}
+                  ></i>
+                </div>
+
+                {isOpenMenu && (
+                  <ul className="sidebar-submenu">
+                    {item.children.map((child, childIndex) => (
+                      <li key={childIndex}>
+                        <NavLink
+                          to={child.path}
+                          className="sidebar-submenu-item"
+                        >
+                          <i className={`bi ${child.icon}`}></i>
+                          <span>{child.label}</span>
+                        </NavLink>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+
               </li>
+            );
+          }
 
-            </ul>
+          return null;
 
-          )}
-
-        </li>
-
-
-        {/* COMPANY */}
-        <li className="sidebar-item">
-          <i className="bi bi-building"></i>
-          <span>Company</span>
-          <i className="bi bi-chevron-down arrow"></i>
-        </li>
-
-
-        {/* FORUM */}
-        <li className="sidebar-item">
-          <i className="bi bi-question-circle"></i>
-          <span>Forum</span>
-          <i className="bi bi-chevron-down arrow"></i>
-        </li>
-
-
-        {/* SUPPORTIVE PAGES */}
-        <li className="sidebar-item">
-          <i className="bi bi-window-stack"></i>
-          <span>Supportive Pages</span>
-          <i className="bi bi-chevron-down arrow"></i>
-        </li>
-
-
-        {/* PERSONALIZE */}
-        <li className="sidebar-item">
-          <i className="bi bi-palette"></i>
-          <span>Personalize</span>
-          <span className="heart">♥</span>
-        </li>
-
-
-        {/* COMPONENTS */}
-        <li className="sidebar-item">
-          <i className="bi bi-cpu"></i>
-          <span>Components</span>
-        </li>
-
-
-        {/* DOCUMENTATION */}
-        <li className="sidebar-item">
-          <i className="bi bi-journal-code"></i>
-          <span>Documentation</span>
-        </li>
+        })}
 
       </ul>
 

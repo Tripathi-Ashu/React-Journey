@@ -46,12 +46,12 @@ const userData = {
     {
       name: "Will Smith",
       message: "Taste is better than previous for all.",
-      image: "/assets/user2.jpg"
+      image: "https://png.pngtree.com/png-clipart/20230927/original/pngtree-man-avatar-image-for-profile-png-image_13001882.png"
     },
     {
       name: "Nilli Doe",
       message: "Back to the work.",
-      image: "/assets/user3.jpg"
+      image: "https://png.pngtree.com/png-clipart/20230927/original/pngtree-man-avatar-image-for-profile-png-image_13001882.png"
     }
   ],
 
@@ -61,28 +61,28 @@ const userData = {
       location: "Delhi, IN",
       task: "2121",
       earning: "$ 3521.26",
-      image: "/assets/user1.jpg"
+      image: "https://png.pngtree.com/png-clipart/20230927/original/pngtree-man-avatar-image-for-profile-png-image_13001882.png"
     },
     {
       name: "Rennie D'Souza",
       location: "Doha, Qatar",
       task: "1524",
       earning: "$ 958.25",
-      image: "/assets/user2.jpg"
+      image: "https://png.pngtree.com/png-clipart/20230927/original/pngtree-man-avatar-image-for-profile-png-image_13001882.png"
     },
     {
       name: "Will Smith",
       location: "Los Angeles, Ca, USA",
       task: "7584",
       earning: "$ 9582.05",
-      image: "/assets/user3.jpg"
+      image: "https://png.pngtree.com/png-clipart/20230927/original/pngtree-man-avatar-image-for-profile-png-image_13001882.png"
     },
     {
       name: "John Doe",
       location: "New Jersey, UK",
       task: "3250",
       earning: "$ 1554.05",
-      image: "/assets/user4.jpg"
+      image: "https://png.pngtree.com/png-clipart/20230927/original/pngtree-man-avatar-image-for-profile-png-image_13001882.png"
     }
   ]
 };

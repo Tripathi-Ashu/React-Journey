@@ -16,32 +16,14 @@ import Network from "./pages/Network";
 import Social from "./pages/Social";
 import Inventory from "./pages/Inventory";
 
-function Professional() {
-  return (
-    <div>
-      <h1>Professional Profile</h1>
-      <p>This is Professional Profile page.</p>
-    </div>
-  );
-}
+import Profile from "./pages/Profile";
+import Company from "./pages/Company";
+import Forum from "./pages/Forum";
+import SupportivePages from "./pages/SupportivePages";
 
-function ProfileSocial() {
-  return (
-    <div>
-      <h1>Social Profile</h1>
-      <p>This is Social Profile page.</p>
-    </div>
-  );
-}
-
-function Analytical() {
-  return (
-    <div>
-      <h1>Analytical Profile</h1>
-      <p>This is Analytical Profile page.</p>
-    </div>
-  );
-}
+import Personalize from "./pages/Personalize";
+import Components from "./pages/Components";
+import Documentation from "./pages/Documentation";
 
 function Layout() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -87,45 +69,29 @@ function App() {
 
       <Route element={<Layout />}>
 
-        <Route
-          path="/dashboard"
-          element={<Dashboard />}
-        />
+        {/* MAIN MENU */}
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/finance" element={<Finance />} />
+        <Route path="/network" element={<Network />} />
+        <Route path="/social" element={<Social />} />
+        <Route path="/inventory" element={<Inventory />} />
 
-        <Route
-          path="/finance"
-          element={<Finance />}
-        />
+        
+        <Route path="/profile/:type" element={<Profile />} />
 
-        <Route
-          path="/network"
-          element={<Network />}
-        />
+       
+        <Route path="/company/:type" element={<Company />} />
 
-        <Route
-          path="/social"
-          element={<Social />}
-        />
+       
+        <Route path="/forum" element={<Forum />} />
+        <Route path="/forum/details" element={<Forum />} />
 
-        <Route
-          path="/inventory"
-          element={<Inventory />}
-        />
+        
+        <Route path="/supportive/:type" element={<SupportivePages />} />
 
-        <Route
-          path="/profile/professional"
-          element={<Professional />}
-        />
-
-        <Route
-          path="/profile/social"
-          element={<ProfileSocial />}
-        />
-
-        <Route
-          path="/profile/analytical"
-          element={<Analytical />}
-        />
+        <Route path="/personalize" element={<Personalize />} />
+        <Route path="/components" element={<Components />} />
+        <Route path="/documentation" element={<Documentation />} />
 
       </Route>
 
