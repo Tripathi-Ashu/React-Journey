@@ -9,6 +9,7 @@ import { BrowserRouter } from "react-router-dom";
 import { DashboardProvider } from "./context/DashboardContext";
 import { InventoryProvider } from "./context/InventoryContext";
 import { UserProvider } from "./context/UserContext";
+import { AuthProvider } from "./context/AuthContext";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
@@ -18,15 +19,17 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 
     <BrowserRouter>
 
-      <DashboardProvider>
-        <InventoryProvider>
-          <UserProvider>
+      <AuthProvider>
+        <DashboardProvider>
+          <InventoryProvider>
+            <UserProvider>
 
-            <App />
+              <App />
 
-          </UserProvider>
-        </InventoryProvider>
-      </DashboardProvider>
+            </UserProvider>
+          </InventoryProvider>
+        </DashboardProvider>
+      </AuthProvider>
 
     </BrowserRouter>
 

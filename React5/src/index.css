@@ -76,3 +76,74 @@ body {
   }
 
 }
+
+/* ================================
+   AUTH PAGES (Sign In / Sign Up)
+================================ */
+
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.auth-card {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.auth-card h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #8019f5;
+}
+
+.auth-card input {
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.auth-card input:focus {
+  outline: none;
+  border-color: #8019f5;
+}
+
+.auth-card button {
+  padding: 12px;
+  background: #8019f5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.auth-card button:hover {
+  background: #6a0edb;
+}
+
+.auth-card p {
+  text-align: center;
+  font-size: 14px;
+  margin: 0;
+}
+
+.auth-error {
+  background: #ffe5e5;
+  color: #d32f2f;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  text-align: center;
+}

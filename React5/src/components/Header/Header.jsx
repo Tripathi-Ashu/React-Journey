@@ -1,10 +1,32 @@
-import {useState} from 'react'
+import { useState } from 'react'
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../context/AuthContext";
+
+import ProfileDropdown from "./ProfileDropdown";
 
 import "./Header.css";
 
 function Header({ onMenuClick }) {
 
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
+
+  const { user, logout } = useAuth();
+  const navigate = useNavigate();
+
+  const toggleProfileDropdown = () => {
+    setIsProfileDropdownOpen(prev => !prev);
+  };
+
+  const closeProfileDropdown = () => {
+    setIsProfileDropdownOpen(false);
+  };
+
+  const handleLogout = () => {
+    setIsProfileDropdownOpen(false);
+    logout();
+    navigate("/supportive/sign-in");
+  };
 
 
   return (
@@ -60,7 +82,7 @@ function Header({ onMenuClick }) {
                        placeholder="Search here..."
               />
 
-  
+
 
                <button className="btn">
                    <i className="bi bi-sliders"></i>
@@ -413,12 +435,12 @@ function Header({ onMenuClick }) {
                 </button>
             </div>
 
-            {/* Profile */}
-            <div className="dropdown">
+            {/* Profile — ab custom React state se control hota hai */}
+            <div className="profile-trigger-wrapper">
 
               <button
                 className="btn p-0"
-                data-bs-toggle="dropdown"
+                onClick={toggleProfileDropdown}
               >
 
                 <img
@@ -429,63 +451,12 @@ function Header({ onMenuClick }) {
 
               </button>
 
-              <div className="dropdown-menu dropdown-menu-end profile-dropdown p-2">
-
-                <div className="d-flex align-items-center p-2 border-bottom mb-2">
-
-                  <img
-                    src="/assets/user.jpg"
-                    alt="User"
-                    className="profile-large"
-                  />
-
-                  <div className="ms-2">
-
-                    <h6 className="mb-1">
-                      AdminUIUX
-                    </h6>
-
-                    <small className="text-secondary">
-                      🇺🇸 United States
-                    </small>
-
-                  </div>
-
-                </div>
-
-                <a className="dropdown-item" href="#">
-                  <i className="bi bi-grid me-2"></i>
-                  My Dashboard
-                </a>
-
-                <a className="dropdown-item" href="#">
-                  <i className="bi bi-currency-dollar me-2"></i>
-                  Earning
-                </a>
-
-                <a className="dropdown-item" href="#">
-                  <i className="bi bi-gift me-2"></i>
-                  Subscription
-                </a>
-
-                <a className="dropdown-item" href="#">
-                  <i className="bi bi-file-text me-2"></i>
-                  Statement
-                </a>
-
-                <a className="dropdown-item" href="#">
-                  <i className="bi bi-gear me-2"></i>
-                  Account Setting
-                </a>
-
-                <hr className="dropdown-divider" />
-
-                <a className="dropdown-item text-danger" href="#">
-                  <i className="bi bi-box-arrow-right me-2"></i>
-                  Logout
-                </a>
-
-              </div>
+              <ProfileDropdown
+                isOpen={isProfileDropdownOpen}
+                onClose={closeProfileDropdown}
+                user={user}
+                onLogout={handleLogout}
+              />
 
             </div>
 
@@ -495,9 +466,9 @@ function Header({ onMenuClick }) {
 
       </nav>
     </header>
-  
+
     </>
-    
+
   );
 }
 

@@ -1,0 +1,130 @@
+
+
+.profile-dropdown-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 1998;
+  }
+  
+  .profile-dropdown-card {
+    position: fixed;
+    top: 70px;
+    right: 20px;
+  
+    width: 300px;
+  
+    background: #ffffff;
+  
+    border-radius: 12px;
+  
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  
+    padding: 12px;
+  
+    z-index: 1999;
+  }
+  
+  
+  /* ================================
+     TOP — photo + naam
+  ================================ */
+  
+  .profile-dropdown-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  
+    padding: 10px;
+  
+    border-bottom: 1px solid #eee;
+  
+    margin-bottom: 8px;
+  }
+  
+  .profile-dropdown-avatar {
+    width: 48px;
+    height: 48px;
+  
+    border-radius: 50%;
+  
+    object-fit: cover;
+  }
+  
+  
+  /* ================================
+     MENU ITEMS
+  ================================ */
+  
+  .profile-dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  
+    padding: 10px 12px;
+  
+    border-radius: 8px;
+  
+    color: #444;
+  
+    text-decoration: none;
+  
+    font-size: 14px;
+  
+    transition: 0.2s ease;
+  }
+  
+  .profile-dropdown-item i {
+    font-size: 16px;
+    width: 18px;
+  }
+  
+  .profile-dropdown-item:hover {
+    background: #f3e8ff;
+    color: #8019f5;
+  }
+  
+  
+  /* Badge like "Upgrade" */
+  
+  .profile-dropdown-badge {
+    margin-left: auto;
+    color: #16a34a;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  
+  .profile-dropdown-sub {
+    margin-left: auto;
+    color: #999;
+    font-size: 13px;
+  }
+  
+  
+  /* Divider */
+  
+  .profile-dropdown-divider {
+    margin: 8px 0;
+    border-color: #eee;
+  }
+  
+  
+  /* Logout — red highlight */
+  
+  .profile-dropdown-logout {
+    color: #dc3545;
+  }
+  
+  .profile-dropdown-logout:hover {
+    background: #ffe5e5;
+    color: #dc3545;
+  }
+  
+  
+
+  
+  @media (max-width: 480px) {
+    .profile-dropdown-card {
+      right: 10px;
+      width: calc(100% - 20px);
+    }
+  }
