@@ -137,6 +137,33 @@
 
 
 /* ================================
+   BADGE (jaise Email ke "9+")
+================================ */
+
+.sidebar-badge {
+  margin-left: auto;
+
+  background: #ff4f81;
+  color: #ffffff;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  padding: 2px 7px;
+
+  border-radius: 999px;
+
+  line-height: 1.4;
+}
+
+/* Active item ke andar badge white bg + purple text (contrast ke liye) */
+.sidebar-item.active .sidebar-badge {
+  background: #ffffff;
+  color: #8019f5;
+}
+
+
+/* ================================
    EXPANDABLE TOGGLE (Profile / Company / Forum)
 ================================ */
 

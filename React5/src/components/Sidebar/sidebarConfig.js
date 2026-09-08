@@ -1,68 +1,60 @@
 export const sidebarMenu = [
 
-    { type: "link", label: "Dashboard", icon: "bi-house-door", path: "/dashboard" },
-    { type: "link", label: "Finance", icon: "bi-wallet2", path: "/finance" },
-    { type: "link", label: "Network", icon: "bi-grid", path: "/network" },
-    { type: "link", label: "Social", icon: "bi-bullseye", path: "/social" },
-    { type: "link", label: "Inventory", icon: "bi-box", path: "/inventory" },
-  
-    { type: "heading", label: "Pages" },
-  
-    {
-      type: "submenu",
-      key: "profile",
-      label: "Profile",
-      icon: "bi-person-circle",
-      children: [
-        { label: "Professional", icon: "bi-briefcase", path: "/profile/professional" },
-        { label: "Social", icon: "bi-people", path: "/profile/social" },
-        { label: "Analytical", icon: "bi-bar-chart", path: "/profile/analytical" },
-      ],
-    },
-  
-    {
-      type: "submenu",
-      key: "company",
-      label: "Company",
-      icon: "bi-building",
-      children: [
-        { label: "Company Profile", icon: "bi-building-fill", path: "/company/profile" },
-        { label: "User Rules", icon: "bi-file-earmark-text", path: "/company/user-rules" },
-        { label: "Career", icon: "bi-briefcase-fill", path: "/company/career" },
-        { label: "Help Center", icon: "bi-question-circle-fill", path: "/company/help-center" },
-        { label: "Contact Us", icon: "bi-telephone-fill", path: "/company/contact-us" },
-      ],
-    },
-  
-    {
-      type: "submenu",
-      key: "forum",
-      label: "Forum",
-      icon: "bi-question-circle",
-      children: [
-        { label: "Forum", icon: "bi-chat-dots", path: "/forum" },
-        { label: "Forum Details", icon: "bi-chat-square-text", path: "/forum/details" },
-      ],
-    },
-  
-    {
-      type: "submenu",
-      key: "supportive",
-      label: "Supportive Pages",
-      icon: "bi-window-stack",
-      children: [
-        { label: "Sign In", icon: "bi-box-arrow-in-right", path: "/supportive/sign-in" },
-        { label: "Sign Up", icon: "bi-person-plus", path: "/supportive/sign-up" },
-        { label: "Forget Password", icon: "bi-key", path: "/supportive/forget-password" },
-        { label: "Change Password", icon: "bi-shield-lock", path: "/supportive/change-password" },
-        { label: "Onboarding", icon: "bi-flag", path: "/supportive/onboarding" },
-        { label: "404 Error", icon: "bi-exclamation-triangle", path: "/supportive/404-error" },
-        { label: "Error", icon: "bi-x-octagon", path: "/supportive/error" },
-      ],
-    },
-  
-    { type: "link", label: "Personalize", icon: "bi-palette", path: "/personalize" },
-    { type: "link", label: "Components", icon: "bi-cpu", path: "/components" },
-    { type: "link", label: "Documentation", icon: "bi-journal-code", path: "/documentation" },
-  
-  ];
+  { type: "heading", label: "Application" },
+
+  { type: "link", label: "Dashboard", path: "/dashboard", icon: "bi-house-door" },
+  { type: "link", label: "Finance", path: "/finance", icon: "bi-wallet2" },
+  { type: "link", label: "Network", path: "/network", icon: "bi-grid" },
+  { type: "link", label: "Social", path: "/social", icon: "bi-bullseye" },
+  { type: "link", label: "Inventory", path: "/inventory", icon: "bi-box" },
+
+  { type: "heading", label: "Pages" },
+
+  {
+    type: "submenu",
+    key: "profile",
+    label: "Profile",
+    icon: "bi-person-circle",
+    children: [
+      { label: "Professional", path: "/profile/professional", icon: "bi-person-badge" },
+      { label: "Social", path: "/profile/social", icon: "bi-people" },
+      { label: "Analytical", path: "/profile/analytical", icon: "bi-bar-chart" },
+    ],
+  },
+
+  {
+    type: "submenu",
+    key: "company",
+    label: "Company",
+    icon: "bi-building",
+    children: [
+      { label: "About", path: "/company/about", icon: "bi-info-circle" },
+      { label: "Careers", path: "/company/careers", icon: "bi-briefcase" },
+      { label: "Contact", path: "/company/contact", icon: "bi-envelope" },
+    ],
+  },
+
+  { type: "link", label: "Forum", path: "/forum", icon: "bi-question-circle" },
+
+  {
+    type: "submenu",
+    key: "supportive",
+    label: "Supportive Pages",
+    icon: "bi-window-stack",
+    children: [
+      { label: "Error 404", path: "/supportive/error", icon: "bi-exclamation-triangle" },
+      { label: "Maintenance", path: "/supportive/maintenance", icon: "bi-tools" },
+    ],
+  },
+
+  { type: "link", label: "Personalize", path: "/personalize", icon: "bi-palette" },
+  { type: "link", label: "Components", path: "/components", icon: "bi-cpu" },
+  { type: "link", label: "Documentation", path: "/documentation", icon: "bi-journal-code" },
+
+  { type: "heading", label: "Applications" },
+
+  { type: "link", label: "Email", path: "/email", icon: "bi-envelope", badge: "9+" },
+  { type: "link", label: "Explorer", path: "/explorer", icon: "bi-folder" },
+  { type: "link", label: "Calendar", path: "/calendar", icon: "bi-calendar3" },
+
+];

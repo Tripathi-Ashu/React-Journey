@@ -28,7 +28,7 @@ function Sidebar({ isOpen }) {
 
         {sidebarMenu.map((item, index) => {
 
-          // HEADING (jaise "Pages")
+          // HEADING (jaise "Application", "Pages", "Applications")
           if (item.type === "heading") {
             return (
               <li key={index} className="sidebar-heading">
@@ -37,7 +37,7 @@ function Sidebar({ isOpen }) {
             );
           }
 
-          // SIMPLE LINK (jaise Dashboard, Finance, Personalize)
+          // SIMPLE LINK (jaise Dashboard, Finance, Forum, Personalize, Email...)
           if (item.type === "link") {
             return (
               <li key={index}>
@@ -49,15 +49,20 @@ function Sidebar({ isOpen }) {
                 >
                   <i className={`bi ${item.icon}`}></i>
                   <span>{item.label}</span>
+
                   {item.label === "Personalize" && (
                     <span className="heart">♥</span>
+                  )}
+
+                  {item.badge && (
+                    <span className="sidebar-badge">{item.badge}</span>
                   )}
                 </NavLink>
               </li>
             );
           }
 
-          // SUBMENU (jaise Profile, Company, Forum, Supportive Pages)
+          // SUBMENU (jaise Profile, Company, Supportive Pages)
           if (item.type === "submenu") {
 
             const isOpenMenu = !!openMenus[item.key];
@@ -86,7 +91,9 @@ function Sidebar({ isOpen }) {
                       <li key={childIndex}>
                         <NavLink
                           to={child.path}
-                          className="sidebar-submenu-item"
+                          className={({ isActive }) =>
+                            `sidebar-submenu-item ${isActive ? "active" : ""}`
+                          }
                         >
                           <i className={`bi ${child.icon}`}></i>
                           <span>{child.label}</span>

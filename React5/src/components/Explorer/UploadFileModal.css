@@ -1,0 +1,128 @@
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+  
+    background: rgba(0, 0, 0, 0.45);
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    z-index: 2000;
+  }
+  
+  .modal-box {
+    background: #fff;
+    width: 420px;
+    max-width: 90vw;
+  
+    border-radius: 14px;
+    padding: 24px;
+  
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+  }
+  
+  .modal-title {
+    font-weight: 700;
+    margin-bottom: 18px;
+  }
+  
+  .drop-zone {
+    border: 2px dashed #c084fc;
+    background: #f5ecff;
+  
+    border-radius: 12px;
+  
+    padding: 30px 16px;
+  
+    text-align: center;
+  
+    cursor: pointer;
+  
+    color: #8019f5;
+  
+    margin-bottom: 16px;
+  }
+  
+  .drop-zone i {
+    font-size: 28px;
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  .selected-file-name {
+    display: block;
+    margin-top: 8px;
+    color: #555;
+  }
+  
+  .modal-field {
+    margin-bottom: 12px;
+  }
+  
+  .modal-field label {
+    display: block;
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 4px;
+  }
+  
+  .modal-field input {
+    width: 100%;
+    padding: 10px 12px;
+  
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  
+    font-size: 14px;
+  }
+  
+  .modal-field input:focus {
+    outline: none;
+    border-color: #8019f5;
+  }
+  
+  .modal-hint {
+    display: block;
+    color: #8019f5;
+    margin-bottom: 14px;
+    font-size: 12px;
+  }
+  
+  .modal-error {
+    color: #e74c3c;
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+  
+  .modal-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    margin-top: 10px;
+  }
+  
+  .btn-discard {
+    background: none;
+    border: none;
+    color: #687896;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .btn-send {
+    background: #8019f5;
+    color: #fff;
+    border: none;
+  
+    padding: 10px 20px;
+    border-radius: 8px;
+  
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .btn-send:hover {
+    background: #6b0fd1;
+  }
