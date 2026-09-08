@@ -25,7 +25,7 @@ function Header({ onMenuClick }) {
   const handleLogout = () => {
     setIsProfileDropdownOpen(false);
     logout();
-    navigate("/supportive/sign-in");
+    navigate("/sign-in");
   };
 
 

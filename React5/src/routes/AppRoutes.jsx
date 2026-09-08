@@ -32,9 +32,11 @@ function AppRoutes() {
     <Routes>
 
       {/* PUBLIC ROUTES */}
-      <Route path="/sign-in" element={<SignIn />} />
-      <Route path="/sign-up" element={<SignUp />} />
-
+      <Route path="/supportive">
+        <Route index element = {<SupportivePages />}></Route>
+      <Route path="sign-in" element={<SignIn />} />
+      <Route path="sign-up" element={<SignUp />} />
+      </Route>
       <Route path="/" element={<Navigate to="/dashboard" replace />} />
 
       {/* PROTECTED ROUTES */}
@@ -54,7 +56,7 @@ function AppRoutes() {
         <Route path="/profile/:type" element={<Profile />} />
         <Route path="/company/:type" element={<Company />} />
         <Route path="/forum" element={<Forum />} />
-        <Route path="/supportive/:type" element={<SupportivePages />} />
+       
 
         <Route path="/personalize" element={<Personalize />} />
         <Route path="/components" element={<Components />} />

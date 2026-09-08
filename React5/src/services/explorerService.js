@@ -1,6 +1,6 @@
 const BASE_URL = "https://dummyjson.com";
 
-// DummyJSON product ko humare "file" shape me convert karta hai
+
 function mapProductToFile(product, index = 0) {
   const fileTypes = ["pdf", "docx", "pptx", "png"];
 
@@ -16,7 +16,6 @@ function mapProductToFile(product, index = 0) {
   };
 }
 
-// ---------- GET all files ----------
 export async function getFiles() {
   const res = await fetch(`${BASE_URL}/products?limit=12`);
   if (!res.ok) throw new Error("Failed to fetch files");
@@ -24,7 +23,6 @@ export async function getFiles() {
   return data.products.map(mapProductToFile);
 }
 
-// ---------- GET search (real API call) ----------
 export async function searchFilesAPI(query) {
   const res = await fetch(`${BASE_URL}/products/search?q=${encodeURIComponent(query)}`);
   if (!res.ok) throw new Error("Search failed");
@@ -32,8 +30,7 @@ export async function searchFilesAPI(query) {
   return data.products.map(mapProductToFile);
 }
 
-// ---------- POST new file ----------
-// Note: DummyJSON asli save nahi karta, sirf fake id return karta hai.
+
 export async function uploadFile(fileData) {
   const res = await fetch(`${BASE_URL}/products/add`, {
     method: "POST",
@@ -43,7 +40,7 @@ export async function uploadFile(fileData) {
   if (!res.ok) throw new Error("Failed to upload file");
   const created = await res.json();
 
-  // API save nahi karta, isliye final object khud banaya
+ 
   return {
     id: created.id,
     fileName: fileData.fileName,
@@ -56,8 +53,7 @@ export async function uploadFile(fileData) {
   };
 }
 
-// ---------- PUT existing file ----------
-// Note: DummyJSON asli update nahi karta, isliye local merge kiya.
+
 export async function updateFile(id, existingFile, updates) {
   const res = await fetch(`${BASE_URL}/products/${id}`, {
     method: "PUT",
@@ -70,8 +66,7 @@ export async function updateFile(id, existingFile, updates) {
   return { ...existingFile, ...updates };
 }
 
-// ---------- DELETE file ----------
-// Note: DummyJSON "isDeleted: true" bhejta hai par server pe kuch delete nahi hota.
+
 export async function deleteFile(id) {
   const res = await fetch(`${BASE_URL}/products/${id}`, {
     method: "DELETE",

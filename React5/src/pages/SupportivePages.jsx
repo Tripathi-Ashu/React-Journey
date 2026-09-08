@@ -38,10 +38,7 @@ function SupportivePages() {
 
   const data = supportiveData[type];
 
-  if (!data) {
-    return <p>Page not found</p>;
-  }
-
+ 
   return (
     <div className="dashboard-container">
 
@@ -52,7 +49,7 @@ function SupportivePages() {
           <p>{data.subtitle}</p>
         </div>
 
-      </div>
+      </div> 
 
       <div className="dashboard-card p-5">
         <h3>{data.title}</h3>
