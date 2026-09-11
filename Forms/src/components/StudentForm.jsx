@@ -10,10 +10,10 @@ function StudentForm() {
     return(
         <>
           <div className="form-container">
-            <h2>Student Resistration</h2>
+            <h2>Student Resistration</h2>  
    
             <form onSubmit={handleSubmit}>
-                
+                  
             </form>
           </div>
         </>
